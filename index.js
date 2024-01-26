@@ -28,6 +28,9 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 const usersRoutes = require("./routes/users.route");
 app.use("/users", usersRoutes);
 
+const postsRoutes = require("./routes/posts.route");
+app.use("/posts", postsRoutes);
+
 app.listen(3000, () => {
   console.log("I am ready to listen you"); //when server is started this anonymous fuction will call.
 });
